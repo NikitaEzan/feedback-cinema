@@ -11,7 +11,6 @@ const listFilms = () => {
     fetch('https://swapi.dev/api/films/')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             renderListFilms(data.results);
             hidePreloader(filmsListContainer);
             return true;
@@ -41,7 +40,6 @@ const getFilm = (url) => {
 }
 
 const renderListFilms = (films) => {
-    console.log(films);
     // выводим список фильмов
     for(let i = 0; i < films.length; i++) {
         filmsListContainer.innerHTML += `<a href="${films[i].url}" class="film-item">${films[i].title}</div>`;
