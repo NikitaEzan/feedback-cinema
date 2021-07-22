@@ -50,7 +50,6 @@ const renderListFilms = (films) => {
     for (let i = 0; i < films.length; i++) {
         renderedItems[i].addEventListener('click', (event) => {
             event.preventDefault();
-            console.log(event);
             getFilm(event.target.href);
         });
     }
